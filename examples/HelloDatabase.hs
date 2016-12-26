@@ -28,7 +28,7 @@ viewMessages limit
     = do Database messages <- ask
          return $ take limit messages
 
--- This will define @ViewMessage@ and @AddMessage@ for us.
+-- This will define @ViewMessages@ and @AddMessage@ for us.
 $(makeAcidic ''Database ['addMessage, 'viewMessages])
 
 main :: IO ()
